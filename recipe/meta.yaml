@@ -1,5 +1,5 @@
 {% set name = "npTDMS" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dd6d131cc386cfc65b02c6ff9653cf311ad17c7d38b2a29d2c513b00394e6cb1
+  sha256: 93bf0e05e133f56f4deb3c833badd2e7bfe5f6082dd027eb1ac1cf915e57f420
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vv"
   entry_points:
     - tdmsinfo = nptdms.tdmsinfo:main
 
@@ -34,9 +34,7 @@ about:
   home: https://github.com/adamreeve/npTDMS
   license: LGPL-3.0
   license_family: GPL
-  # Requested inclusion of license in sdist:
-  # https://github.com/adamreeve/npTDMS/pull/99
-  license_file: '{{ environ["RECIPE_DIR"] }}/COPYING.LESSER'
+  license_file: COPYING.LESSER
   summary: 'Cross-platform, NumPy based module for reading TDMS files produced by LabView.'
   description: |
     npTDMS is a cross-platform Python package for reading and writing TDMS
