@@ -1,5 +1,5 @@
 {% set name = "npTDMS" %}
-{% set version = "0.25.0" %}
+{% set version = "0.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4a148d02cbde44dc676384a228ca8b776091562499dd5873d073e7f611a1822c
+  sha256: b252687385fe7e2db40dd33ba536494ce4e7420cdd3e255621c8e801929ff59a
 
 build:
   noarch: python
