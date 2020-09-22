@@ -5,7 +5,7 @@ Home: https://github.com/adamreeve/npTDMS
 
 Package license: LGPL-3.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Cross-platform, NumPy based module for reading TDMS files produced by LabView.
 
