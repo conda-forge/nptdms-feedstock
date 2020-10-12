@@ -5,9 +5,13 @@ Home: https://github.com/adamreeve/npTDMS
 
 Package license: LGPL-3.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nptdms-feedstock/blob/master/LICENSE.txt)
 
 Summary: Cross-platform, NumPy based module for reading TDMS files produced by LabView.
+
+Development: https://github.com/adamreeve/npTDMS
+
+Documentation: http://nptdms.readthedocs.io/
 
 npTDMS is a cross-platform Python package for reading and writing TDMS
 files as produced by LabVIEW, and is built on top of the numpy package.
