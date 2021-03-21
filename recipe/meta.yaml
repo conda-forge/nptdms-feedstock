@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=2
     - pip
   run:
-    - python
+    - python >=2
     - numpy
 
 test:
@@ -32,9 +32,11 @@ test:
 
 about:
   home: https://github.com/adamreeve/npTDMS
-  license: LGPL-3.0
+  license: 	LGPL-3.0-only
   license_family: GPL
-  license_file: COPYING.LESSER
+  license_file:
+    - COPYING
+    - COPYING.LESSER
   summary: Cross-platform, NumPy based module for reading TDMS files produced by LabView.
   description: |
     npTDMS is a cross-platform Python package for reading and writing TDMS
