@@ -3,7 +3,7 @@ About nptdms
 
 Home: https://github.com/adamreeve/npTDMS
 
-Package license: LGPL-3.0
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nptdms-feedstock/blob/master/LICENSE.txt)
 
@@ -46,6 +46,7 @@ Installing `nptdms` from the `conda-forge` channel can be achieved by adding `co
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `nptdms` can be installed with:
