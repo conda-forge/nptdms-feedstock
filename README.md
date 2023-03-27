@@ -1,11 +1,11 @@
-About nptdms
-============
+About nptdms-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nptdms-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/adamreeve/npTDMS
 
 Package license: LGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nptdms-feedstock/blob/main/LICENSE.txt)
 
 Summary: Cross-platform, NumPy based module for reading TDMS files produced by LabView.
 
