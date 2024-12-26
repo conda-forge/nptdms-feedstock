@@ -6,25 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0e65c237e9d50b9b8e162b9c34171353a5ea05f4019c99c3e8ebc00722361cbc
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - tdmsinfo = nptdms.tdmsinfo:main
 
 requirements:
   host:
-    - python >=2
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=2
+    - python >={{ python_min }}
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nptdms
   commands:
