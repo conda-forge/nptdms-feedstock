@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: npTDMS
+  version: 1.10.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | lower }}-${{ version }}.tar.gz
+  sha256: 3072f349fa70c24a8f5ce504a847992acacc1cf67e312375595d79bab9264cb4
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - tdmsinfo = nptdms.tdmsinfo:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy
+
+tests:
+  - python:
+      imports:
+        - nptdms
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - tdmsinfo -h
+
+about:
+  license: LGPL-3.0-only
+  license_file:
+    - COPYING
+    - COPYING.LESSER
+  summary: Cross-platform, NumPy based module for reading TDMS files produced by LabView.
+  description: |
+    npTDMS is a cross-platform Python package for reading and writing TDMS
+    files as produced by LabVIEW, and is built on top of the numpy package.
+    Data read from a TDMS file is stored in numpy arrays, and numpy arrays are
+    also used when writing TDMS file.
+  homepage: https://github.com/adamreeve/npTDMS
+  repository: https://github.com/adamreeve/npTDMS
+  documentation: http://nptdms.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - carlodri
+    - lstebel
