@@ -33,7 +33,9 @@ tests:
   - python:
       imports:
         - nptdms
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
