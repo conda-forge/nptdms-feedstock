@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: npTDMS
-  version: "1.12.1"
+  version: "1.13.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | lower }}-${{ version }}.tar.gz
-  sha256: ef0e7bdedda4f26c602c822e58e6254f067b9bc139efca572ccb15a4ecedef23
+  sha256: d9209da06c21edc28c9a8620cf78466ace80d2e1d8a23cfea534b0938ed310cc
 
 build:
   number: 0
